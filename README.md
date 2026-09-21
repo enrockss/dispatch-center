@@ -3,6 +3,7 @@ Dispatch Center Mini untuk ISP
 -------------------------------
 Mempermudah proses pengelolaan ticket kendala pada FTTH. Kendala akan dikelompokan per teknisi.
 Bisa menampilkan ticket yang masih open (belum terjadwal), dispatched (terjadwal ke lokasi pending/proses perbaikan), dan ticket closed (kendala selesai diperbaiki)
+Akses setup.php untuk initialize user login dan database. jangan lupa hapus jika sudah tergenerate.
 
 **Fitur**
 - Dashboard menampilkan ticket open dan dispatched
