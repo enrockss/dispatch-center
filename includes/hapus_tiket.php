@@ -1,5 +1,6 @@
 <?php
 require_once '../config/database.php';
+require_once '../config/telegram.php';
 require_once '../includes/auth_check.php';
 
 if (isset($_GET['id'])) {
@@ -23,7 +24,7 @@ if (isset($_GET['id'])) {
     // Kirim notif "dibatalkan" HANYA jika tiket sudah didispatch (status ASSIGNED)
     // dan teknisinya punya telegram_id. Tiket OPEN/CLOSED tidak perlu notif ini.
     if ($data && $data['status'] === 'ASSIGNED' && !empty($data['telegram_id'])) {
-        $token = "8391361473:AAE0L64Y68-w2kO5MtjkZaqfXi4Yp0Uq_AI";
+        $token = TELEGRAM_BOT_TOKEN;
 
         $message = "🚫 *TIKET DIBATALKAN: #{$id}*\n\n"
                  . "👤 *Pelanggan:* {$data['nama_pelanggan']}\n"
